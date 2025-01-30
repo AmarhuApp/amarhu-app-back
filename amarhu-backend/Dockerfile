@@ -15,4 +15,4 @@ EXPOSE 8080
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
-COPY src/main/resources/keystore.p12 /app/resources/keystore.p12
+COPY src/main/resources/keystore.p12 /app/keystore.p12

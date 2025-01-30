@@ -51,8 +51,6 @@ public class ProductionControllerTest {
 
         List<Production> mockProductions = List.of(production1, production2);
 
-        // Simulación del servicio
-        when(productionService.getAllProductions()).thenReturn(mockProductions);
 
         // Prueba del endpoint
         mockMvc.perform(get("/api/production")

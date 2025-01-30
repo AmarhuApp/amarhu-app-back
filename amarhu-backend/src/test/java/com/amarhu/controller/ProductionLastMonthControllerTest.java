@@ -51,8 +51,6 @@ public class ProductionLastMonthControllerTest {
 
         List<Production> mockProductions = List.of(production1, production2);
 
-        // Simular el servicio
-        when(productionLastMonthService.getProductionForLastMonth()).thenReturn(mockProductions);
 
         // Probar el endpoint
         mockMvc.perform(get("/api/production-last-month")

@@ -1,81 +1,33 @@
 package com.amarhu.production.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.math.BigDecimal;
 
+@Data
 public class RankingJRDTO {
 
-    private Long id;
+    private Long userId;
     private String nombre;
-    private int produccionTotal;
-    private BigDecimal gananciasTotales;
-    private BigDecimal gananciasNetas;
-    private int caidos;
-    private BigDecimal gananciaPromedio;
+    private int totalVideos;
+    private int videosCaidos;
+    private BigDecimal gananciaTotal;
+    private BigDecimal gananciaNeta;
+    private BigDecimal costeTotalProduccion;
+    private BigDecimal totalGeneradoPorCaidos;
 
-    public RankingJRDTO(Long id, String nombre, int produccionTotal, BigDecimal gananciasTotales, BigDecimal gananciasNetas, int caidos, BigDecimal gananciaPromedio) {
-        this.id = id;
+    // Constructor con todos los datos necesarios
+    public RankingJRDTO(Long userId, String nombre, int totalVideos, int videosCaidos,
+                        BigDecimal gananciaTotal, BigDecimal gananciaNeta,
+                        BigDecimal costeTotalProduccion, BigDecimal totalGeneradoPorCaidos) {
+        this.userId = userId;
         this.nombre = nombre;
-        this.produccionTotal = produccionTotal;
-        this.gananciasTotales = gananciasTotales;
-        this.gananciasNetas = gananciasNetas;
-        this.caidos = caidos;
-        this.gananciaPromedio = gananciaPromedio;
-    }
-
-    // Getters y setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getProduccionTotal() {
-        return produccionTotal;
-    }
-
-    public void setProduccionTotal(int produccionTotal) {
-        this.produccionTotal = produccionTotal;
-    }
-
-    public BigDecimal getGananciasTotales() {
-        return gananciasTotales;
-    }
-
-    public void setGananciasTotales(BigDecimal gananciasTotales) {
-        this.gananciasTotales = gananciasTotales;
-    }
-
-    public BigDecimal getGananciasNetas() {
-        return gananciasNetas;
-    }
-
-    public void setGananciasNetas(BigDecimal gananciasNetas) {
-        this.gananciasNetas = gananciasNetas;
-    }
-
-    public int getCaidos() {
-        return caidos;
-    }
-
-    public void setCaidos(int caidos) {
-        this.caidos = caidos;
-    }
-
-    public BigDecimal getGananciaPromedio() {
-        return gananciaPromedio;
-    }
-
-    public void setGananciaPromedio(BigDecimal gananciaPromedio) {
-        this.gananciaPromedio = gananciaPromedio;
+        this.totalVideos = totalVideos;
+        this.videosCaidos = videosCaidos;
+        this.gananciaTotal = gananciaTotal;
+        this.gananciaNeta = gananciaNeta;
+        this.costeTotalProduccion = costeTotalProduccion;
+        this.totalGeneradoPorCaidos = totalGeneradoPorCaidos;
     }
 }

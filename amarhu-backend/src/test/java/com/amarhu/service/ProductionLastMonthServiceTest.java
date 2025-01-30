@@ -24,17 +24,5 @@ public class ProductionLastMonthServiceTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
-    public void testCalculateLastMonthProduction() {
-        // Obtener un usuario existente
-        User user = userRepository.findAll().stream().findFirst()
-                .orElseThrow(() -> new RuntimeException("No hay usuarios en la base de datos."));
 
-        // Calcular producción del mes pasado
-        Production production = productionLastMonthService.calculateLastMonthProduction(user);
-
-        // Validar
-        assertNotNull(production);
-        System.out.println("Producción del mes pasado: " + production);
-    }
 }

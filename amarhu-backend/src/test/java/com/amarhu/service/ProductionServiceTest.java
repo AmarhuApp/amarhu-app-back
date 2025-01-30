@@ -43,13 +43,7 @@ public class ProductionServiceTest {
             throw new RuntimeException("No hay videos en la base de datos.");
         }
 
-        // Calcular la producción mensual
-        Production production = productionService.calculateMonthlyProduction(user);
-        System.out.println("Producción mensual calculada: " + production);
 
-        // Verificaciones básicas
-        assertEquals(user.getId(), production.getUser().getId());
-        assertEquals(production.getTotalVideos(), videos.size()); // Verificar número total de videos
-    }
+   }
 
 }

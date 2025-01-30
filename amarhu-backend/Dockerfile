@@ -1,5 +1,5 @@
 # Usa una imagen base de OpenJDK 21
-FROM openjdk:21-jdk-slim
+FROM openjdk:17-jdk-slim
 
 # Define una variable para el archivo JAR
 ARG JAR_FILE=target/amarhu-backend-0.0.1.jar

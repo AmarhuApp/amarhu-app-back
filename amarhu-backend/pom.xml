@@ -15,7 +15,7 @@
     <name>amarhu-backend</name>
     <description>Amarhu Backend</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <repositories>
         <repository>
